@@ -1,4 +1,4 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
     header {
         background-color: rgba(31, 114, 150);
         color: rgb(255, 255, 255);
@@ -6,6 +6,9 @@
     main {
         grid-template-columns: 1fr 1fr;
     }
+    /* h1{
+        display: block;
+    } */
     h2 {
         color: rgb(31, 114, 150);
     }
