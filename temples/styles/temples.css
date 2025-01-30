@@ -1,0 +1,114 @@
+* {
+	margin: 0.5 rem;
+	padding: 10 px;
+	box-sizing: border-box;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Roboto", serif;
+	font-size: 2rem;
+	margin-left: 1rem;
+    color:#fff;
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: rgb(26, 26, 118);
+	text-align: center;
+	margin: 1rem;
+}
+
+nav {
+	max-width: 700px;
+	margin: 1.4rem auto;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.imageList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.imageList img {
+    max-width: 25rem;
+    height: auto;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.imageList img:hover {
+transform:scale(1.15);
+}
+
+.imageList figcaption {
+    color:rgb(26, 26, 118);
+    font-size: larger;
+    margin: 3%;
+}
+
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #333;
+	color: #fff;
+    max-width: 2rem;
+}
+
+.navigation a {
+	display: flexed;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
