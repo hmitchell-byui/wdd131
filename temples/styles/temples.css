@@ -111,7 +111,7 @@ li {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     max-height: 6rem;
     background-color: rgb(26, 26, 118);
 }

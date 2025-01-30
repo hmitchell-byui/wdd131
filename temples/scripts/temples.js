@@ -2,7 +2,7 @@ let d = new Date();
 document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
 document.querySelector('#lastModified').textContent = `Last Modification: ${document.lastModified}`;
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('resize', function(){
     const hamButton = document.getElementById('menu');
     const navigation = document.getElementById('nav-menu');
 
