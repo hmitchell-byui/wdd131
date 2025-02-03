@@ -4,15 +4,25 @@
         color: rgb(255, 255, 255);
     }
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
-    /* h1{
+    h1{
         display: block;
-    } */
+    } 
     h2 {
         color: rgb(31, 114, 150);
     }
     .imageList figcaption {
         color: rgba(31, 114, 150);
+    }
+    #menu {
+        display:none;
+    }
+    .navigation{
+        flex-direction:row;
+    }
+    .navigation a{
+        display:block;
+        flex:1 1 100%;
     }
 }

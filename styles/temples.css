@@ -58,16 +58,18 @@ nav {
 
 /* Small view navigation */
 #menu {
-    display:block;
+    font-size: 1.5rem;
+    border: 0;
+    position:absolute;
+    top:1rem;
+    right:1rem;
 }
-#nav-menu {
-    display:none;
-}
-#menu.open + #nav-menu {
+/* #menu.open{
     display:block;
     background-color: #333;
-    color:#fff
-}
+    color:#fff 
+}*/
+
 #menu::before {
     content: "☰";
 }
@@ -78,14 +80,15 @@ nav {
 
 .navigation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    list-style: none;
     background-color: #333;
     color: #fff;
 }
 
 .navigation a {
-    display: flex;
+    display: none;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -96,6 +99,7 @@ nav {
     background-color: #b0adbb;
     color: #353537;
     font-weight: 700;
+    align-items: center;
 }
 
 /* When the button is clicked - the open class is toggled (added/removed) */
