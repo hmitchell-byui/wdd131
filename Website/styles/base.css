@@ -138,8 +138,9 @@
   }
   
   .highlight {
-    color: rgba(255, 221, 0, 0.744);
+    color: rgba(255, 255, 255, 0.744);
     font-size: smaller;
+    font-style:oblique
   }
   
   figure {
