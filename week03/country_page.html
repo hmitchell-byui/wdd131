@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USA Country Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <picture id="hero-image">
+      <source srcset="images/statue-liberty.webp" media="(min-width: 768px)" />
+      <img src="images/mt-rushmore.webp" alt="Mount Rushmore" class="responsive-img" />
+    </picture>
+    <div class="hero-text">
+      <h1 id="hero-title">Explore the USA</h1>
+      <p id="hero-caption">From iconic landmarks to <span class="highlight">rich history</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="weather">
+      <figure class="icon">
+        <img src="images/weather-icon.svg" alt="Partly cloudy weather icon" class="responsive-img" />
+        <figcaption>Partly cloudy weather icon</figcaption>
+      </figure>
+      <div class="details text-box">
+        <p>Temperature: <span id="temp">--</span></p>
+        <p>Wind Speed: <span id="wind">--</span></p>
+        <p id="chill"></p>
+      </div>
+    </section>
+
+    <section class="content">
+      <figure>
+        <img src="images/statue-liberty.webp" alt="Statue of Liberty" class="responsive-img" />
+        <figcaption>Statue of Liberty, New York</figcaption>
+      </figure>
+    </section>
+
+    <section class="iwo-jima-section">
+      <figure>
+        <img src="images/iwo-jima.webp" alt="Iwo Jima flag raising" class="responsive-img" />
+        <figcaption>US Marines raising the flag on Iwo Jima, 1945</figcaption>
+      </figure>
+      <div class="iwo-text text-box">
+        <h2>Raising the Flag on Iwo Jima</h2>
+        <p>This iconic moment symbolizes <span class="highlight">courage</span>, <span class="highlight">unity</span>, and <span class="highlight">sacrifice</span>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; <span id="year"></span></p>
+    <p>Last Modified: <span id="lastModified">Loading…</span></p>
+  </footer>
+</body>
+</html>
