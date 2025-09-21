@@ -1,0 +1,129 @@
+:root {
+  --bg: #f5f5f5;
+  --panel-bg: #ffffff;
+  --accent: #003049;
+  --accent-2: #fcbf49;
+  --text: #1f2933;
+  --max-width: 1000px;
+  --gap: 1rem;
+  --radius: 8px;
+  --page-padding: 1rem;
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+
+.page-content {
+  max-width: var(--max-width);
+  margin: var(--gap) auto;
+  padding: 0 var(--page-padding);
+}
+
+.site-header {
+  background: linear-gradient(180deg, var(--accent) 0%, #0b3b57 60%);
+  color: white;
+  padding: 1.25rem var(--page-padding) 0.5rem;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+}
+
+.hero-picture img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.panel {
+  background: var(--panel-bg);
+  margin: var(--gap) 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.panel-title {
+  margin: 0 0 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.data-list li {
+  margin: 0.4rem 0;
+  font-size: 0.98rem;
+}
+
+.weather-icon {
+  font-size: 1.25rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: linear-gradient(180deg, #0b3b57 0%, #002233 100%);
+}
+
+strong {
+  color: var(--accent);
+}
+
+/* 
+.panel--pride {
+  background: var(--panel-bg);
+  margin: var(--gap) 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: left;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.panel--pride .panel-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.pride-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pride-body p {
+  flex: 1;
+  margin: 0;
+}
+
+.pride-image {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+*/

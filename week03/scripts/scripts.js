@@ -1,62 +1,62 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Footer: Current Year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // Footer logic
+  const yearSpan = document.getElementById("year");
+  const lastModifiedSpan = document.getElementById("lastModified");
 
-  // Static Weather Data
-  const temperature = 45;
-  const windSpeed = 7;
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 
-  document.getElementById('temp').textContent = `${temperature}°F`;
-  document.getElementById('wind').textContent = `${windSpeed} mph`;
+  // Static place data: United States
+  const place = {
+    name: "United States",
+    area: "9,629,091 km²",
+    population: "327,167,434",
+    capital: "Washington, D.C.",
+    language: "English, Spanish, Hawaiian, French",
+    currency: "United States Dollar (USD)",
+    timezone: "UTC−4 to UTC−12",
+    calling: "+1",
+    tld: ".us"
+  };
 
-  const chill =
-    temperature <= 50 && windSpeed > 3
-      ? (
-          35.74 +
-          0.6215 * temperature -
-          35.75 * Math.pow(windSpeed, 0.16) +
-          0.4275 * temperature * Math.pow(windSpeed, 0.16)
-        ).toFixed(1)
-      : 'N/A';
+  // Populate place data
+  document.getElementById("area").textContent = place.area;
+  document.getElementById("population").textContent = place.population;
+  document.getElementById("capital").textContent = place.capital;
+  document.getElementById("language").textContent = place.language;
+  document.getElementById("currency").textContent = place.currency;
+  document.getElementById("timezone").textContent = place.timezone;
+  document.getElementById("calling").textContent = place.calling;
+  document.getElementById("tld").textContent = place.tld;
 
-  document.getElementById('chill').textContent =
-    chill === 'N/A' ? 'Wind Chill: N/A' : `Wind Chill: ${chill}°F`;
+  // Static weather data: Nashville, TN on Feb 15, 2025
+  const weather = {
+    temp: 57, // Fahrenheit
+    conditions: "Partly Cloudy",
+    wind: 5 // mph
+  };
 
-  // GitHub API: Last Modified Timestamp
-  const repoOwner = 'your-username'; // 🔁 Replace with your GitHub username
-  const repoName = 'wdd131';         // 🔁 Replace with your repo name
+  // Populate weather data
+  document.getElementById("temp").textContent = `${weather.temp} °F`;
+  document.getElementById("conditions").textContent = weather.conditions;
+  document.getElementById("wind").textContent = `${weather.wind} mph`;
 
-  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
-    .then(res => res.json())
-    .then(data => {
-      const date = new Date(data[0].commit.committer.date);
-      document.getElementById('lastModified').textContent = date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
-    })
-    .catch(err => {
-      console.error('GitHub API error:', err);
-      document.getElementById('lastModified').textContent = 'Unavailable';
-    });
+  // Wind chill calculation
+  const windChillSpan = document.getElementById("windchill");
 
-  // Hero Image Text Logic
-  const heroImg = document.querySelector('#hero-image img');
-  const heroTitle = document.getElementById('hero-title');
-  const heroCaption = document.getElementById('hero-caption');
+  function calculateWindChill(t, s) {
+    return (
+      35.74 +
+      0.6215 * t -
+      35.75 * Math.pow(s, 0.16) +
+      0.4275 * t * Math.pow(s, 0.16)
+    ).toFixed(1);
+  }
 
-  if (heroImg.src.includes('mt-rushmore')) {
-    heroTitle.textContent = 'Mount Rushmore';
-    heroCaption.innerHTML = 'From iconic landmarks to <span class="highlight">rich history</span>';
-  } else if (heroImg.src.includes('statue-liberty')) {
-    heroTitle.textContent = 'Statue of Liberty';
-    heroCaption.innerHTML = 'A symbol of <span class="highlight">freedom</span> and democracy';
-  } else if (heroImg.src.includes('golden-gate')) {
-    heroTitle.textContent = 'Golden Gate Bridge';
-    heroCaption.innerHTML = 'Engineering marvel and <span class="highlight">scenic beauty</span>';
+  if (weather.temp <= 50 && weather.wind > 3) {
+    const chill = calculateWindChill(weather.temp, weather.wind);
+    windChillSpan.textContent = `${chill} °F`;
   } else {
-    heroTitle.textContent = 'Welcome';
-    heroCaption.textContent = 'Discover amazing places and stories';
-  }   
+    windChillSpan.textContent = "N/A";
+  }
 });

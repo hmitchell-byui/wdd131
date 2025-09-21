@@ -1,0 +1,59 @@
+@media (min-width: 700px) {
+  .page-content {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .panel--data {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+    padding: 1.25rem;
+    position: relative;
+  }
+
+  .panel--data .panel-title {
+    position: relative;
+    background: var(--accent-2);
+    color: #002233;
+    padding: 0.45rem 0.8rem;
+    border-radius: 6px;
+    transform: translateY(-28px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .panel--data .data-list {
+    margin-top: 0.75rem;
+  }
+
+  .panel--weather {
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .panel--weather .panel-title {
+    background: #ffffff;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  .hero-picture img {
+    max-height: 300px;
+  }
+
+  /*
+  .panel--pride {
+    padding: 1.25rem;
+  }
+
+  .panel--pride .panel-title {
+    background: var(--accent-2);
+    padding: 0.45rem 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1rem;
+  }
+  */
+}
