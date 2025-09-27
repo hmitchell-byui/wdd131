@@ -1,0 +1,23 @@
+@media screen and (min-width: 700px) {
+  .navigation {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation a {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    display: block;
+  }
+}
