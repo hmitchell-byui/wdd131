@@ -108,38 +108,3 @@ strong {
     font-size: 1rem;
   }
 }
-/* 
-.panel--pride {
-  background: var(--panel-bg);
-  margin: var(--gap) 0;
-  padding: 1rem;
-  border-radius: var(--radius);
-  text-align: left;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-}
-
-.panel--pride .panel-title {
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.pride-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.pride-body p {
-  flex: 1;
-  margin: 0;
-}
-
-.pride-image {
-  width: 120px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-*/
