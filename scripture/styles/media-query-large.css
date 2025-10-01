@@ -1,9 +1,0 @@
-@media screen and (min-width:700px){
-    header{
-        background-color: black;
-        color: white;
-        main{
-            grid-template-columns: 3fr 1fr;
-        }
-    }
-}
