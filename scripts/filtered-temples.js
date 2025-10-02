@@ -1,4 +1,3 @@
-// Temple data
 const temples = [
   {
     templeName: "Aba Nigeria Temple",
@@ -114,7 +113,6 @@ const temples = [
   }
 ];
 
-// Render temple cards
 function renderTemples(templeArray) {
   const container = document.querySelector(".imageList");
   container.innerHTML = "";
@@ -144,16 +142,19 @@ function renderTemples(templeArray) {
   });
 }
 
-// Filter logic
+function normalizeDate(dateStr) {
+  return new Date(dateStr.replace(/,/g, '').trim());
+}
+
 function filterTemples(criteria) {
   let filtered = [];
 
   switch (criteria) {
     case "old":
-      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+      filtered = temples.filter(t => normalizeDate(t.dedicated).getFullYear() < 1900);
       break;
     case "new":
-      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+      filtered = temples.filter(t => normalizeDate(t.dedicated).getFullYear() > 2000);
       break;
     case "large":
       filtered = temples.filter(t => t.area > 90000);
@@ -168,9 +169,8 @@ function filterTemples(criteria) {
   renderTemples(filtered);
 }
 
-// Navigation event listeners
 document.addEventListener("DOMContentLoaded", () => {
-  renderTemples(temples); // Initial render
+  renderTemples(temples);
 
   document.querySelectorAll(".navigation a").forEach(link => {
     link.addEventListener("click", e => {
@@ -180,24 +180,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Hamburger toggle
   const hamButton = document.querySelector('#menu');
   const navigation = document.querySelector('.navigation');
   hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
   });
-  document.addEventListener("DOMContentLoaded", () => {
-  // Footer logic
-  const yearSpan = document.getElementById("year");
-  const lastModifiedSpan = document.getElementById("lastModified");
 
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  if (lastModifiedSpan) {
-    lastModifiedSpan.textContent = document.lastModified;
-  }
-});
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 });
