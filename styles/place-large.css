@@ -38,9 +38,25 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   }
 
-  .hero-picture img {
-    max-height: 300px;
-  }
+.hero-picture img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  min-height: 60vh; /* Ensures image is at least 30% of viewport height */
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
 
 
+.weather-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/weather_icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0; /* Hide emoji text */
+}
 }
