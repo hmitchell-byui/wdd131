@@ -12,15 +12,14 @@
     position: relative;
   }
 
-  .panel--data .panel-title {
-    position: relative;
-    background: var(--accent-2);
-    color: #002233;
-    padding: 0.45rem 0.8rem;
-    border-radius: 6px;
-    transform: translateY(-28px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  }
+.panel--data .panel-title::after {
+  content: " • Static Data";
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: 0.5rem;
+  font-style: italic;
+}
+
 
   .panel--data .data-list {
     margin-top: 0.75rem;
