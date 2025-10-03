@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aquarium Wonders – Plants, Fish &amp; Supplies</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Aquarium Wonders</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="project.html">Home</a></li>
+        <li><a href="aquarium-info.html">Tank Info</a></li>
+        <li><a href="aquarium-gallery.html" class="active">Plants, Fish &amp; Supplies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <h2>Plants, Fish & Supplies Gallery</h2>
+      <p class="subtitle">Filter by category:</p>
+      <div class="filters">
+        <button onclick="filterImages('plant')">Plants</button>
+        <button onclick="filterImages('fresh-fish')">Freshwater Fish</button>
+        <button onclick="filterImages('salt-fish')">Saltwater Fish</button>
+        <button onclick="filterImages('supply')">Supplies</button>
+        <button onclick="filterImages('all')">Show All</button>
+      </div>
+
+      <div class="image-grid">
+        <figure class="plant">
+          <img src="images/plant1.jpg" alt="Plant: Java Fern">
+          <figcaption>Java Fern</figcaption>
+        </figure>
+        <figure class="plant">
+          <img src="images/plant2.jpg" alt="Plant: Anubias">
+          <figcaption>Anubias</figcaption>
+        </figure>
+        <figure class="fresh-fish">
+          <img src="images/fish1.jpg" alt="Fish: Betta">
+          <figcaption>Betta</figcaption>
+        </figure>
+        <figure class="fresh-fish">
+          <img src="images/fish2.jpg" alt="Fish: Neon Tetra">
+          <figcaption>Neon Tetra</figcaption>
+        </figure>
+        <figure class="salt-fish">
+          <img src="images/fish3.jpg" alt="Fish: Clownfish">
+          <figcaption>Clownfish</figcaption>
+        </figure>
+        <figure class="salt-fish">
+          <img src="images/fish4.jpg" alt="Fish: Blue Tang">
+          <figcaption>Blue Tang</figcaption>
+        </figure>
+        <figure class="supply">
+          <img src="images/supply1.jpg" alt="Supply: Filter">
+          <figcaption>Filter</figcaption>
+        </figure>
+        <figure class="supply">
+          <img src="images/supply2.jpg" alt="Supply: Heater">
+          <figcaption>Heater</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aquarium Wonders | Built by Hunter Mitchell</p>
+  </footer>
+</body>
+</html>

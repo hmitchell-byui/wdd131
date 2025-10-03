@@ -1,0 +1,137 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --primary: #005F73;
+  --secondary: #0A9396;
+  --accent: #94D2BD;
+  --bg: #E9D8A6;
+  --text: #001219;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--secondary);
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.resources ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.resources li + li {
+  margin-top: 0.5rem;
+}
+
+.resources a {
+  font-weight: bold;
+}
+
+.gallery .filters {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery .filters button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+figure {
+  background-color: var(--accent);
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid var(--text);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
