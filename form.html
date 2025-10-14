@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+      <!-- Product Name -->
+      <label for="product">Product Name:</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a product</option>
+        <!-- JS will populate options -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <label><input type="radio" name="rating" value="1" required /> 1</label>
+        <label><input type="radio" name="rating" value="2" /> 2</label>
+        <label><input type="radio" name="rating" value="3" /> 3</label>
+        <label><input type="radio" name="rating" value="4" /> 4</label>
+        <label><input type="radio" name="rating" value="5" /> 5</label>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="install-date">Date of Installation:</label>
+      <input type="date" id="install-date" name="install-date" required />
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features:</legend>
+        <label><input type="checkbox" name="features" value="durability" /> Durability</label>
+        <label><input type="checkbox" name="features" value="design" /> Design</label>
+        <label><input type="checkbox" name="features" value="performance" /> Performance</label>
+        <label><input type="checkbox" name="features" value="value" /> Value</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review:</label>
+      <textarea id="review" name="review" rows="4" placeholder="Share your thoughts..."></textarea>
+
+      <!-- User Name -->
+      <label for="username">Your Name (optional):</label>
+      <input type="text" id="username" name="username" />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Review" />
+    </form>
+  </main>
+
+    <footer>
+      <p><span id="currentYear"></span> 🌻 Hunter Mitchell 🌻| Tennessee, USA </p>
+      <p class="highlight" id="lastModified">Last Modification: 01/01/1970 12:00:00</p>
+    </footer>
+
+  <script src="scripts/form.js"></script>
+</body>
+</html>

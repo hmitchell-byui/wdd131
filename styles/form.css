@@ -1,0 +1,95 @@
+:root {
+  --blue: rgb(29, 77, 114);
+  --blue-1: rgba(29, 77, 114, 0.1);
+  --blue-7: rgba(43, 145, 222, 0.632);
+  --brown: rgb(26, 65, 35);
+  --yellow: rgb(184, 38, 128);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: var(--blue-1);
+  color: #391c1cca;
+  line-height: 1.5;
+  padding: 0;
+}
+
+header {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--blue);
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--blue-7);
+  box-shadow: 0 0 0 2px var(--blue-1);
+}
+
+button {
+  background-color: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--blue-7);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 0.9rem;
+}

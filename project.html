@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aquarium Wonders – Home</title>
-  <meta name="description" content="Home page for Aquarium Wonders, your guide to freshwater and saltwater aquarium keeping.">
-  <meta name="author" content="Hunter Mitchell">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>Aquarium Wonders</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="project.html" class="active">Home</a></li>
-        <li><a href="aquarium-info.html">Tank Info</a></li>
-        <li><a href="aquarium-gallery.html">Plants, Fish &amp; Supplies</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aquarium Project | Hunter Mitchell</title>
+    <meta name="description" content="Aquarium-themed assignment portal for WDD 131">
+    <meta name="author" content="Hunter Mitchell">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+  </head>
 
-  <main>
-    <section class="hero">
-      <h2>Discover the World Beneath the Surface</h2>
-      <p>Your guide to freshwater and saltwater aquarium keeping.</p>
-    </section>
+  <body>
+    <header>
+      <h1>Aquarium Project - <span class="highlight">Hunter Mitchell</span></h1>
+      <nav>
+        <a href="project.html">Home (Refresh)</a>
+        <a href="project_info.html">Tank Info</a>
+        <a href="project_gallery.html">Plants, Fish & Supplies</a>
+        <a href="https://www.liveaquaria.com/" target="_blank" rel="noopener">LiveAquaria</a>
+      </nav>
+    </header>
 
-    <section class="resources">
-      <h2>Get Started</h2>
-      <p>Shop supplies or join the conversation:</p>
-      <ul>
-        <li><a href="https://www.liveaquaria.com/" target="_blank" rel="noopener">LiveAquaria – Fish & Supplies</a></li>
-        <li><a href="https://www.bulkreefsupply.com/" target="_blank" rel="noopener">Bulk Reef Supply – Marine Gear</a></li>
-        <li><a href="https://www.aquariumadvice.com/forums/" target="_blank" rel="noopener">Aquarium Advice Forum</a></li>
-        <li><a href="https://www.reddit.com/r/Aquariums/" target="_blank" rel="noopener">Reddit: r/Aquariums</a></li>
-      </ul>
-    </section>
+    <main>
+      <section class="card">
+        <h2>About My Aquarium</h2>
+        <div class="me">
+          <img class="profile" src="https://picsum.photos/id/1025/200/136" alt="Aquarium Profile Image" width="200" height="136">
+          <p>Welcome to my freshwater aquarium project! I'm Hunter Mitchell, a web development student and aquatic hobbyist based in Nashville, TN. My tank features a mix of live plants, peaceful community fish, and carefully balanced water parameters. I’ve been learning about filtration systems, lighting setups, and aquascaping techniques to create a thriving underwater ecosystem. This project combines my love for nature with my passion for design and structure.</p>
+        </div>
 
-    <section>
-      <h2>Explore</h2>
-      <ul>
-        <li><a href="aquarium-info.html">Tank Info &amp; Care Guides</a></li>
-        <li><a href="aquarium-gallery.html">Plants, Fish &amp; Supplies Gallery</a></li>
-      </ul>
-    </section>
-  </main>
+        <div class="country">
+          <h3>Freshwater Tank Setup</h3>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Aquarium Wonders</p>
-    <p>Last modified: <span id="lastModified"></span></p>
-  </footer>
-</body>
+          <figure>
+            <img src="https://picsum.photos/id/1040/200/136" alt="Aquarium Landscape" width="200">
+            <figcaption>Planted Tank with Driftwood</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://picsum.photos/id/1062/200/136" alt="Fish Close-Up" width="200">
+            <figcaption>Community Fish in Action</figcaption>
+          </figure>
+        </div>
+
+        <div class="country country-text">
+          <p>Freshwater aquariums offer a peaceful and rewarding hobby for nature lovers and design enthusiasts alike. With the right balance of filtration, lighting, and plant care, you can cultivate a vibrant aquatic environment that supports healthy fish and lush greenery. Whether you're housing tetras, guppies, or shrimp, each species adds its own charm to the ecosystem. My setup focuses on low-maintenance plants, beginner-friendly fish, and a natural aquascape inspired by riverbeds and forest streams.</p>
+        </div>
+      </section>
+
+
+      <section class="card">
+        <h2>Aquarium Resources</h2>
+        <ul>
+          <li><a href="https://www.thesprucepets.com/freshwater-aquarium-setup-1381032" target="_blank">Tank Setup & Care Guides</a></li>
+          <li><a href="https://www.liveaquaria.com/category/15/freshwater-aquarium-plants" target="_blank">Plants, Fish & Supplies Gallery</a></li>
+          <li><a href="https://www.aquariumadvice.com/forums/" target="_blank">Aquarium Advice Forum</a></li>
+          <li><a href="https://www.reddit.com/r/Aquariums/" target="_blank">Reddit: r/Aquariums</a></li>
+          <li><a href="https://www.aquariumcoop.com/" target="_blank">Aquarium Co-Op</a></li>
+          <li><a href="https://www.youtube.com/@AquariumCoOp" target="_blank">YouTube: Aquarium Co-Op</a></li>
+          <li><a href="https://www.fishlore.com/" target="_blank">FishLore</a></li>
+          <li><a href="https://www.aquariumfish.net/" target="_blank">AquariumFish.net</a></li>
+          <li><a href="https://www.aquaticcommunity.com/" target="_blank">Aquatic Community</a></li>
+          <li><a href="https://www.fishkeepingworld.com/" target="_blank">Fish Keeping World</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p><span id="currentYear"></span> 🐟 Hunter Mitchell 🐠 | Tennessee, USA</p>
+      <p class="highlight" id="lastModified">Last Modification: 01/01/1970 12:00:00</p>
+    </footer>
+  </body>
 </html>
+
