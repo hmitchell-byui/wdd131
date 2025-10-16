@@ -1,25 +1,33 @@
-// Data for your gallery items
+// Gallery item data
 const items = [
-  { name: "Banghai Cardinal",     category: "salt",      src: "project-images/banghai-cardinal.webp",     alt: "Fish: Banghai Cardinal" },
-  { name: "Christmas Moss",       category: "decor",     src: "project-images/christmas-moss.webp",       alt: "Plant: Christmas Moss" },
-  { name: "Clownfish",            category: "salt",      src: "project-images/clownfish.webp",            alt: "Fish: Clownfish" },
-  { name: "Decor Ornament",       category: "decor",     src: "project-images/decor.webp",                alt: "Decor: Aquarium Ornament" },
-  { name: "Dotted Platy",         category: "fresh",     src: "project-images/dotted-platy.webp",         alt: "Fish: Dotted Platy" },
-  { name: "Fancy Guppy",          category: "fresh",     src: "project-images/fancy-guppy.webp",          alt: "Fish: Fancy Guppy" },
-  { name: "Filter",               category: "equipment", src: "project-images/filter.webp",               alt: "Equipment: Filter" },
-  { name: "Freshwater Food",      category: "equipment", src: "project-images/food-freshwater.webp",      alt: "Food: Freshwater Flakes" },
-  { name: "Saltwater Food",       category: "equipment", src: "project-images/food-saltwater.webp",       alt: "Food: Saltwater Pellets" },
-  { name: "Heater",               category: "equipment", src: "project-images/heater.webp",               alt: "Equipment: Heater" },
-  { name: "Live Rock Crab",       category: "salt",      src: "project-images/liverock-crab.webp",        alt: "Creature: Live Rock Crab" },
-  { name: "Purple Decor",         category: "decor",     src: "project-images/purple-decor.webp",         alt: "Decor: Purple Ornament" },
-  { name: "Starfish",             category: "salt",      src: "project-images/starfish.webp",             alt: "Creature: Starfish" },
-  { name: "Tank",                 category: "equipment", src: "project-images/tank.webp",                 alt: "Equipment: Aquarium Tank" }
+  { name: "Banghai Cardinal", category: "salt", src: "project-images/banghai-cardinal.webp", alt: "Fish: Banghai Cardinal" },
+  { name: "Christmas Moss", category: "decor", src: "project-images/christmas-moss.webp", alt: "Plant: Christmas Moss" },
+  { name: "Clownfish", category: "salt", src: "project-images/clownfish.webp", alt: "Fish: Clownfish" },
+  { name: "Decor Ornament", category: "decor", src: "project-images/decor.webp", alt: "Decor: Aquarium Ornament" },
+  { name: "Dotted Platy", category: "fresh", src: "project-images/dotted-platy.webp", alt: "Fish: Dotted Platy" },
+  { name: "Fancy Guppy", category: "fresh", src: "project-images/fancy-guppy.webp", alt: "Fish: Fancy Guppy" },
+  { name: "Filter", category: "equipment", src: "project-images/filter.webp", alt: "Equipment: Filter" },
+  { name: "Freshwater Food", category: "equipment", src: "project-images/food-freshwater.webp", alt: "Food: Freshwater Flakes" },
+  { name: "Saltwater Food", category: "equipment", src: "project-images/food-saltwater.webp", alt: "Food: Saltwater Pellets" },
+  { name: "Heater", category: "equipment", src: "project-images/heater.webp", alt: "Equipment: Heater" },
+  { name: "Live Rock Crab", category: "salt", src: "project-images/liverock-crab.webp", alt: "Creature: Live Rock Crab" },
+  { name: "Purple Decor", category: "decor", src: "project-images/purple-decor.webp", alt: "Decor: Purple Ornament" },
+  { name: "Starfish", category: "salt", src: "project-images/starfish.webp", alt: "Creature: Starfish" },
+  { name: "Tank", category: "equipment", src: "project-images/tank.webp", alt: "Equipment: Aquarium Tank" }
 ];
 
-// Render the grid of items
+// Render gallery items
 function renderGallery(array) {
   const container = document.querySelector(".imageList");
+  if (!container) return;
+
   container.innerHTML = "";
+
+  if (array.length === 0) {
+    container.innerHTML = `<p class="empty-state">No items found in this category.</p>`;
+    return;
+  }
+
   array.forEach(item => {
     const figure = document.createElement("figure");
     figure.classList.add(item.category);
@@ -37,7 +45,7 @@ function renderGallery(array) {
   });
 }
 
-// Filter items by category
+// Filter gallery by category
 function filterGallery(category) {
   if (category === "all") {
     renderGallery(items);
@@ -46,33 +54,35 @@ function filterGallery(category) {
   }
 }
 
+// DOM ready
 document.addEventListener("DOMContentLoaded", () => {
-  // Initial render
-  renderGallery(items);
+  // Gallery logic only runs if gallery elements exist
+  const galleryContainer = document.querySelector(".imageList");
+  const galleryNavLinks = document.querySelectorAll(".gallery-nav a");
 
-  // Set up filter links
-  document.querySelectorAll(".navigation a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const cat = link.dataset.filter;
-      filterGallery(cat);
+  if (galleryContainer && galleryNavLinks.length > 0) {
+    renderGallery(items);
 
-      // Close mobile nav after selection
-      document.querySelector(".navigation").classList.remove("open");
-      document.getElementById("menu").classList.remove("open");
+    galleryNavLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const cat = link.dataset.filter;
+        filterGallery(cat);
+
+        galleryNavLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
     });
-  });
+  }
 
-  // Toggle the hamburger menu
-  const ham = document.getElementById("menu");
-  const nav = document.querySelector(".navigation");
-  ham.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    ham.classList.toggle("open");
-  });
+  // Footer year and last modified injection
+  const yearSpan = document.getElementById("year") || document.getElementById("currentYear");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 
-  // Inject year & last-modified
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent =
-    `Last Modification: ${document.lastModified}`;
+  const modifiedSpan = document.getElementById("lastModified");
+  if (modifiedSpan) {
+    modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+  }
 });

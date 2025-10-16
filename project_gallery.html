@@ -10,41 +10,40 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <!-- Mobile-first CSS -->
-    <link rel="stylesheet" href="styles/project.css" />
+    <link rel="stylesheet" href="styles/base.css" />
     <!-- Large-screen overrides -->
     <link rel="stylesheet"
-          href="styles/project-filtered.css"
+          href="styles/project.css"
           media="screen and (min-width: 800px)" />
     <!-- Filter & nav script -->
     <script src="scripts/project.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-row">
-        <h1>Aquarium Wonders - <span class="highlight">Hunter Mitchell</span></h1>
-        <nav>
-          <ul class="navigation site-nav">
-            <li><a href="project.html">Home</a></li>
-            <li><a href="project_info.html">Tank Info</a></li>
-            <li><a href="project_gallery.html">Photos & Supplies</a></li>
-            <li><a href="project_links.html">Links / Prices</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <h1>Aquarium Project - <span class="highlight">Hunter Mitchell</span></h1>
+      <nav>
+        <a href="project.html">Home</a>
+        <a href="project_info.html">Tank Info</a>
+        <a href="project_gallery.html">Plants, Fish & Supplies</a>
+        <a href="https://www.liveaquaria.com/" target="_blank" rel="noopener">LiveAquaria</a>
+      </nav>
     </header>
 
+
     <main>
-      <section class="gallery-header">
+      <section class="card">
         <h2>Aquarium Gallery</h2>
-        <nav>
-          <ul class="navigation gallery-nav" aria-label="Gallery filters">
-            <li><a href="#" data-filter="all">All</a></li>
-            <li><a href="#" data-filter="decor">Decor</a></li>
-            <li><a href="#" data-filter="fresh">Freshwater</a></li>
-            <li><a href="#" data-filter="salt">Saltwater</a></li>
-            <li><a href="#" data-filter="equipment">Equipment</a></li>
-          </ul>
-        </nav>
+        <div class="middle">
+          <nav>
+            <ul class="gallery-nav" aria-label="Gallery filters">
+              <li><a href="#" data-filter="all">All</a></li>
+              <li><a href="#" data-filter="decor">Decor</a></li>
+              <li><a href="#" data-filter="fresh">Freshwater</a></li>
+              <li><a href="#" data-filter="salt">Saltwater</a></li>
+              <li><a href="#" data-filter="equipment">Equipment</a></li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <section class="imageList">
