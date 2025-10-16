@@ -1,76 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aquarium Wonders – Plants, Fish &amp; Supplies</title>
-  <meta name="description" content="Visual gallery of aquarium plants, freshwater and saltwater fish, and essential supplies.">
-  <meta name="author" content="Hunter Mitchell">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
-    <header>
-      <h1>Aquarium Project - <span class="highlight">Hunter Mitchell</span></h1>
-      <nav>
-        <a href="project.html">Home (Refresh)</a>
-        <a href="project_info.html">Tank Info</a>
-        <a href="project_gallery.html">Plants, Fish & Supplies</a>
-        <a href="https://www.liveaquaria.com/" target="_blank" rel="noopener">LiveAquaria</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquarium Wonders | Hunter Mitchell</title>
+    <meta name="description" content="Filterable gallery of aquarium decor, plants, fish & equipment." />
+    <meta name="author" content="Hunter Mitchell" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Mobile-first CSS -->
+    <link rel="stylesheet" href="styles/project.css" />
+    <!-- Large-screen overrides -->
+    <link rel="stylesheet"
+          href="styles/project-filtered.css"
+          media="screen and (min-width: 800px)" />
+    <!-- Filter & nav script -->
+    <script src="scripts/project.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-row">
+        <h1>Aquarium Wonders - <span class="highlight">Hunter Mitchell</span></h1>
+        <nav>
+          <ul class="navigation site-nav">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="project_info.html">Tank Info</a></li>
+            <li><a href="project_gallery.html">Photos & Supplies</a></li>
+            <li><a href="project_links.html">Links / Prices</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-  <main>
-    <section class="gallery">
-      <h2>Plants, Fish & Supplies Gallery</h2>
-      <p class="subtitle">Filter by category:</p>
-      <div class="filters">
-        <button onclick="filterImages('plant')">Plants</button>
-        <button onclick="filterImages('fresh-fish')">Freshwater Fish</button>
-        <button onclick="filterImages('salt-fish')">Saltwater Fish</button>
-        <button onclick="filterImages('supply')">Supplies</button>
-        <button onclick="filterImages('all')">Show All</button>
-      </div>
+    <main>
+      <section class="gallery-header">
+        <h2>Aquarium Gallery</h2>
+        <nav>
+          <ul class="navigation gallery-nav" aria-label="Gallery filters">
+            <li><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter="decor">Decor</a></li>
+            <li><a href="#" data-filter="fresh">Freshwater</a></li>
+            <li><a href="#" data-filter="salt">Saltwater</a></li>
+            <li><a href="#" data-filter="equipment">Equipment</a></li>
+          </ul>
+        </nav>
+      </section>
 
-      <div class="image-grid">
-        <figure class="plant">
-          <img src="images/plant1.jpg" alt="Plant: Java Fern">
-          <figcaption>Java Fern</figcaption>
-        </figure>
-        <figure class="plant">
-          <img src="images/plant2.jpg" alt="Plant: Anubias">
-          <figcaption>Anubias</figcaption>
-        </figure>
-        <figure class="fresh-fish">
-          <img src="images/fish1.jpg" alt="Fish: Betta">
-          <figcaption>Betta</figcaption>
-        </figure>
-        <figure class="fresh-fish">
-          <img src="images/fish2.jpg" alt="Fish: Neon Tetra">
-          <figcaption>Neon Tetra</figcaption>
-        </figure>
-        <figure class="salt-fish">
-          <img src="images/fish3.jpg" alt="Fish: Clownfish">
-          <figcaption>Clownfish</figcaption>
-        </figure>
-        <figure class="salt-fish">
-          <img src="images/fish4.jpg" alt="Fish: Blue Tang">
-          <figcaption>Blue Tang</figcaption>
-        </figure>
-        <figure class="supply">
-          <img src="images/supply1.jpg" alt="Supply: Filter">
-          <figcaption>Filter</figcaption>
-        </figure>
-        <figure class="supply">
-          <img src="images/supply2.jpg" alt="Supply: Heater">
-          <figcaption>Heater</figcaption>
-        </figure>
-      </div>
-    </section>
-  </main>
+      <section class="imageList">
+        <h2 class="sr-only">Aquarium Items</h2>
+        <!-- JS will inject figures here -->
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Aquarium Wonders | Built by Hunter Mitchell</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; <span id="year"></span> Hunter Mitchell | Aquarium Wonders Project | Tennessee, USA</p>
+      <p id="lastModified"></p>
+    </footer>
+
+  </body>
 </html>
